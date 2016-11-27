@@ -35,11 +35,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\..\ThirdParty\Sitecore\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\libraries\Sitecore.Kernel.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Skillcore.Mvc\bin\Sitecore.Mvc.dll</HintPath>
+    <Reference Include="Sitecore.Mvc">
+      <HintPath>..\libraries\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
