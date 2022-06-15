@@ -8,7 +8,7 @@ namespace Skillcore.Stats.Processors
         {
             if (StatsCollector.CollectStats && StatsCollector.IsItApiCall)
             {
-                StatsCollector.InitRequestStatsCollector(args.Context);
+                StatsCollector.InitRequestStatsCollector(args.HttpContext);
             }
         }
     }

@@ -8,7 +8,7 @@ namespace Skillcore.Stats.Processors
         {
             // it's a '/api/sitecore' request but 'StatsFilter.OnResultExecuted' method was not called
             // exception thrown or OutputCache used
-            if (args.Context.Response.StatusCode >= 400)
+            if (args.HttpContext.Response.StatusCode >= 400)
             {
                 StatsCollector.SaveRequestError();
             }

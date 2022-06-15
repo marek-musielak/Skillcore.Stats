@@ -24,7 +24,7 @@ namespace Skillcore.Stats
         static StatsCollector()
         {
             CollectStats = Settings.GetBoolSetting("Collect.Performance.Stats", false);
-            ApiPath = Settings.GetSetting("Skillcore.Stats.CommandRoutePrefix") ?? String.Empty;
+            ApiPath = Settings.GetSetting("Speak.Mvc.CommandRoutePrefix") ?? String.Empty;
             if (!ApiPath.StartsWith("/"))
             {
                 ApiPath = "/" + ApiPath;
@@ -89,7 +89,7 @@ namespace Skillcore.Stats
             }
         }
 
-        public static void InitRequestStatsCollector(HttpContext context)
+        public static void InitRequestStatsCollector(HttpContextBase context)
         {
             context.Items[CollectorKey] = new StatsCollector(context.Request.Url.AbsolutePath);
         }
